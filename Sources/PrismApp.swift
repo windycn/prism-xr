@@ -309,18 +309,13 @@ private final class ReleaseCheck {
 
         let alert = NSAlert()
         do {
-            let endpoint = URL(string: "https://api.github.com/repos/windycn/prism-xr/releases/latest")!
-            var request = URLRequest(url: endpoint, timeoutInterval: 12)
-            request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-            let (data, response) = try await URLSession.shared.data(for: request)
-            guard (response as? HTTPURLResponse)?.statusCode == 200,
-                  let installed = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
-                  let current = version(installed) else { throw URLError(.badServerResponse) }
-            let release = try JSONDecoder().decode(Release.self, from: data)
-            guard let latest = version(release.tag_name) else { throw URLError(.cannotParseResponse) }
+            guard let installed = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
+                  let current = version(installed) else { throw URLError(.cannotParseResponse) }
+            let tag = try await latestTag()
+            guard let latest = version(tag) else { throw URLError(.cannotParseResponse) }
             if current.lexicographicallyPrecedes(latest) {
                 alert.messageText = "发现新版 Prism XR"
-                alert.informativeText = "当前版本 \(installed)，最新版本 \(release.tag_name)。"
+                alert.informativeText = "当前版本 \(installed)，最新版本 \(tag)。"
                 alert.addButton(withTitle: "打开 GitHub 发布页")
                 alert.addButton(withTitle: "稍后")
                 if alert.runModal() == .alertFirstButtonReturn {
@@ -336,6 +331,30 @@ private final class ReleaseCheck {
         }
         alert.addButton(withTitle: "好")
         alert.runModal()
+    }
+
+    private static func latestTag() async throws -> String {
+        let endpoint = URL(string: "https://api.github.com/repos/windycn/prism-xr/releases/latest")!
+        var request = URLRequest(url: endpoint, timeoutInterval: 8)
+        request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+        if let (data, response) = try? await URLSession.shared.data(for: request),
+           (response as? HTTPURLResponse)?.statusCode == 200,
+           let release = try? JSONDecoder().decode(Release.self, from: data) {
+            return release.tag_name
+        }
+
+        // The public Releases API may rate-limit shared networks.
+        let page = URL(string: "https://github.com/windycn/prism-xr/releases/latest")!
+        var fallback = URLRequest(url: page, timeoutInterval: 10)
+        fallback.httpMethod = "HEAD"
+        let (_, response) = try await URLSession.shared.data(for: fallback)
+        let prefix = "/windycn/prism-xr/releases/tag/"
+        guard (response as? HTTPURLResponse)?.statusCode == 200,
+              let url = response.url, url.scheme == "https", url.host == "github.com",
+              url.path.hasPrefix(prefix), version(url.lastPathComponent) != nil else {
+            throw URLError(.badServerResponse)
+        }
+        return url.lastPathComponent
     }
 
     private static func version(_ text: String) -> [Int]? {

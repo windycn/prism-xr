@@ -1,6 +1,6 @@
 # Prism XR
 
-[English](README.md) · [下载 v1.0.0](https://github.com/windycn/prism-xr/releases/tag/v1.0.0)
+[English](README.md) · [下载 v1.0.1](https://github.com/windycn/prism-xr/releases/latest)
 
 面向雷鸟 GT 系列 AR 眼镜的 macOS 空间工作台。在任意一块工作屏镜像 Mac 内屏，其余工作屏扩展为彼此独立的桌面。
 

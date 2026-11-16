@@ -1,6 +1,6 @@
 # Prism XR
 
-[简体中文](README.zh-CN.md) · [Download v1.0.0](https://github.com/windycn/prism-xr/releases/tag/v1.0.0)
+[简体中文](README.zh-CN.md) · [Download v1.0.1](https://github.com/windycn/prism-xr/releases/latest)
 
 A native macOS spatial workspace for RayNeo GT-series AR glasses. Mirror the Mac’s built-in display in one position and extend it with independent desktops you can arrange around you.
 
