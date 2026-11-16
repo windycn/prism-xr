@@ -31,6 +31,10 @@ struct WorkspaceView: View {
                 HStack {
                     PageHeading(title: "空间工作台", detail: desktop.isEnabled ? desktop.status :
                                     (desktop.outputAvailable ? "一块镜像 Mac 内屏，其余屏幕独立扩展。" : "眼镜未连接，可先调整布局和参数。"))
+                    Button("视角回正", systemImage: "scope", action: resetViewpoint)
+                        .labelStyle(.iconOnly)
+                        .help("视角回正（⇧⌘R）")
+                        .keyboardShortcut("r", modifiers: [.command, .shift])
                     if desktop.isStarting { ProgressView().controlSize(.small).accessibilityLabel("正在启动空间桌面") }
                     if desktop.isEnabled {
                         Button("识别屏幕", systemImage: "number.square", action: desktop.identifyDisplays)

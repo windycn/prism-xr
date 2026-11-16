@@ -1,6 +1,6 @@
 # Prism XR
 
-[English](README.md) · [下载 v1.0.1](https://github.com/windycn/prism-xr/releases/latest)
+[English](README.en.md) · [下载 v1.0.0](https://github.com/windycn/prism-xr/releases/tag/v1.0.0)
 
 面向雷鸟 GT 系列 AR 眼镜的 macOS 空间工作台。在任意一块工作屏镜像 Mac 内屏，其余工作屏扩展为彼此独立的桌面。
 
@@ -30,3 +30,9 @@
 虚拟显示器使用 macOS 私有接口。第三方组件附有 [DeskPad MIT 声明](Resources/DeskPad-MIT.txt) 和 [Depth Anything V2 Apache 2.0 许可](Resources/Apache-2.0.txt)。Prism XR 是独立项目。
 
 ![自定义布局编辑器，画布中为两块示例屏幕](docs/layout-editor.png)
+
+## 更多界面
+
+![立体显示测试图](docs/stereo.png)
+
+![显示设备与头部追踪](docs/devices.png)

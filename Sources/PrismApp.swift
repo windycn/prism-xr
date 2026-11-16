@@ -26,7 +26,7 @@ struct PrismApp: App {
         .defaultSize(width: 1150, height: 805)
         .defaultPosition(.center)
         .windowResizability(.contentMinSize)
-        .windowToolbarStyle(.unified)
+        .windowStyle(.hiddenTitleBar)
         .commands {
             CommandGroup(after: .appInfo) {
                 Button("检查更新…") { Task { await ReleaseCheck.run() } }
@@ -73,7 +73,6 @@ struct AppWindow: View {
     let glassesOutput: GlassesOutput
     let brightness: InternalBrightness
     @AppStorage("stereoDisparity") private var disparity = 12.0
-    @Environment(\.openWindow) private var openWindow
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Binding var yaw: Double
     @Binding var pitch: Double
@@ -92,34 +91,9 @@ struct AppWindow: View {
         .animation(reduceMotion ? nil : .easeInOut(duration: 0.18), value: destination)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(nsColor: .windowBackgroundColor))
+        .safeAreaPadding(.top, 30)
         .safeAreaBar(edge: .bottom, spacing: 0) {
             BottomTabBar(selection: $destination)
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .primaryAction) {
-                if destination == .workspace {
-                    Button {
-                        if tracker.isRunning { tracker.recenter() }
-                        yaw = 0
-                        pitch = 0
-                        roll = 0
-                    } label: {
-                        Label("视角回正", systemImage: "scope")
-                    }
-                    .help("视角回正（⇧⌘R）")
-                    .keyboardShortcut("r", modifiers: [.command, .shift])
-                }
-                if destination == .stereo {
-                    Button {
-                        openWindow(id: destination == .workspace ? "workspace-output" : "stereo-output")
-                    } label: {
-                        Label("SBS 输出", systemImage: "rectangle.split.2x1")
-                            .labelStyle(.titleAndIcon)
-                    }
-                    .disabled(destination == .stereo && stereo.source != .pattern && stereo.pair == nil)
-                    .help("打开独立的左右眼输出窗口")
-                }
-            }
         }
         .task(id: desktop.request(layout: layouts.selection, preferences: layouts.preferences)) {
             desktop.update(desktop.request(layout: layouts.selection, preferences: layouts.preferences))

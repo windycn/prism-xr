@@ -6,13 +6,21 @@ struct StereoView: View {
     let capture: CaptureSession
     @AppStorage("stereoDisparity") private var disparity = 12.0
     @AppStorage("stereoSwapEyes") private var swapEyes = false
+    @Environment(\.openWindow) private var openWindow
     @State private var showImporter = false
     @State private var importError: String?
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
-                PageHeading(title: "立体显示", detail: "检查左右眼、调节视差，或在 Mac 上将 2D 内容转为 SBS。")
+                HStack {
+                    PageHeading(title: "立体显示", detail: "检查左右眼、调节视差，或在 Mac 上将 2D 内容转为 SBS。")
+                    Button("SBS 输出", systemImage: "rectangle.split.2x1") {
+                        openWindow(id: "stereo-output")
+                    }
+                    .disabled(session.source != .pattern && session.pair == nil)
+                    .help("打开独立的左右眼输出窗口")
+                }
 
                 sourceSelector
                 previewCard

@@ -1,32 +1,38 @@
 # Prism XR
 
-[简体中文](README.zh-CN.md) · [Download v1.0.1](https://github.com/windycn/prism-xr/releases/latest)
+[English](README.en.md) · [下载 v1.0.0](https://github.com/windycn/prism-xr/releases/tag/v1.0.0)
 
-A native macOS spatial workspace for RayNeo GT-series AR glasses. Mirror the Mac’s built-in display in one position and extend it with independent desktops you can arrange around you.
+面向雷鸟 GT 系列 AR 眼镜的 macOS 空间工作台。在任意一块工作屏镜像 Mac 内屏，其余工作屏扩展为彼此独立的桌面。
 
-![Prism XR workspace with three equally sized screens and simulated content](docs/workspace.png)
+![Prism XR 空间工作台，三块等大的屏幕均为模拟画面](docs/workspace.png)
 
-- **Spatial desktops.** Nine presets and custom drag-to-arrange layouts. Choose which screen mirrors the Mac, where each desktop goes and how large it appears. Resolution, HiDPI, refresh rate and viewing settings are saved per layout.
-- **Viewing controls.** Overview and head-turn viewing, a field-of-view slider and horizon lock. On GT Max, software head tracking supports recentering and stationary calibration. Use the device page for supported hardware modes and diagnostics.
-- **Display controls.** The glasses output is separate from the workspace desktop count. The optional dimming control remembers and restores built-in display brightness.
-- **Stereo preview.** Experimental depth-based SBS preview for images or selected capture sources. Optical compatibility has not been verified.
-- **Updates.** Choose **检查更新…** in the **Prism XR** menu. The app checks the latest stable GitHub release and opens the release page when a newer version is available. Installation is manual.
+- **多屏工作台**。九套预设和可拖拽的自定义布局。可指定镜像屏、调整分辨率与 HiDPI，并分别保存刷新率、观看方式和视野。三屏预设的屏幕等大。
+- **视角与设备**。支持一览、软件转头查看、滚轮调视野和锁定水平线。GT Max 支持静止校准、视角回正，以及已适配的机身模式控制。
+- **显示管理**。眼镜视频输出独立于工作桌面。可将 Mac 内屏亮度降到最低，停止或断开输出时恢复。
+- **立体预览**。提供测试图、图片和采集来源的实验性 SBS 预览，镜内立体效果尚待验证。
+- **检查更新**。在「Prism XR → 检查更新…」查询 GitHub 最新正式版。发现新版本可打开发布页下载，手动安装。
 
-## Compatibility
+## 兼容性
 
-Apple Silicon, macOS 27 or later, and an active Mac built-in display. All physical glasses testing for Prism XR was performed specifically with RayNeo GT Max on earlier development builds. Version 1.0 was checked offline. For other GT models, future RayNeo glasses or compatible external video displays, select the output under **眼镜视频输出**. Generic output uses a fixed view or overview. Head tracking and hardware mode controls depend on the verified GT Max USB protocol. Video compatibility with other models is unverified.
+需要 Apple Silicon、macOS 27 或更新版本，以及可用的 Mac 内置显示器。本项目的眼镜实机测试专门使用雷鸟 GT Max。开发版已验证该型号的视频输出、姿态采样和多屏采集。V1.0 进行了离线验证。其他 GT 型号、后续雷鸟设备或能被 Mac 识别的外接视频设备，可以手动选择「眼镜视频输出」，以一览或固定视角尝试。通用输出的实机兼容性待验证，头部追踪和机身控制依赖已验证的 GT Max USB 协议。
 
-## Getting started
+## 使用
 
-1. Extract the release ZIP and open **Prism XR.app**. The build is ad hoc signed and has not been Apple notarized. You can also build from source.
-2. Connect the glasses over a video-capable USB-C connection. If automatic detection is unavailable, choose the intended external display.
-3. Select a layout and click **开始空间桌面**. Grant macOS Screen & System Audio Recording permission to the running app when requested. An updated ad hoc build may need its permission associated again.
-4. On GT Max, hold still during calibration and use **视角回正** as needed.
+1. 解压发布包，打开 **Prism XR.app**。发布包使用临时签名，尚未经过 Apple 公证，也可从源码自行构建。
+2. 用支持视频的 USB-C 连接眼镜。如未自动识别，在工作台选择对应的外接输出。
+3. 选布局并点击「开始空间桌面」。首次使用需要允许当前应用录制屏幕。更新临时签名构建后，macOS 可能要求重新关联权限。
+4. GT Max 启用软件追踪后，平视静止片刻完成校准。需要时使用「视角回正」。
 
-## Build and verification
+## 构建与验证
 
-With the Xcode 27 toolchain, open `Prism XR.xcodeproj` or run `bash build.sh`. Run `bash Tests/run.sh --gpu` for offline regressions and Metal pixel readback. [Validation notes](VALIDATION.md) record hardware and offline evidence. The user interface is currently in Simplified Chinese.
+使用 Xcode 27 工具链打开 `Prism XR.xcodeproj` 或执行 `bash build.sh`。执行 `bash Tests/run.sh --gpu` 运行离线回归和 GPU 像素回读。实机与离线验证见 [验证记录](VALIDATION.md)。
 
-Virtual displays use private macOS APIs. The [DeskPad MIT notice](Resources/DeskPad-MIT.txt) and [Depth Anything V2 Apache 2.0 license](Resources/Apache-2.0.txt) accompany their respective components. Prism XR is an independent project.
+虚拟显示器使用 macOS 私有接口。第三方组件附有 [DeskPad MIT 声明](Resources/DeskPad-MIT.txt) 和 [Depth Anything V2 Apache 2.0 许可](Resources/Apache-2.0.txt)。Prism XR 是独立项目。
 
-![Custom layout editor with two simulated desktop panels](docs/layout-editor.png)
+![自定义布局编辑器，画布中为两块示例屏幕](docs/layout-editor.png)
+
+## 更多界面
+
+![立体显示测试图](docs/stereo.png)
+
+![显示设备与头部追踪](docs/devices.png)
