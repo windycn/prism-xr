@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C699A9975B300F59F7428D /* LayoutEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38375B3CFB7CED7F810AE2 /* LayoutEditor.swift */; };
+		09F6E4A597BE2717F34AF55D /* StereoEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D871F7B50D14A9B40F51624 /* StereoEngine.swift */; };
+		0B65171E1E344F7390E2B293 /* WorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5A44F36C462645FA01BDCB /* WorkspaceView.swift */; };
+		10E511E5724222F330EEDC6E /* CustomLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1C2349E453E444645C29F /* CustomLayouts.swift */; };
+		2951A8DA244ED40E7A1B8635 /* GlassesOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769261F0ED05504470F0DCD /* GlassesOutput.swift */; };
+		301334E95AD9DA262AEDAFBD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AB07ABC59632752A8ABE0E /* Cocoa.framework */; };
+		40932B7769BC807149647BEF /* OrientationFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01C8F0A8DCEC9828A69868 /* OrientationFusion.swift */; };
+		472F1362232CEEDAAD6BC6E7 /* DepthAnythingV2SmallF16P6.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 8EECCF05A7167238AD85B3ED /* DepthAnythingV2SmallF16P6.mlpackage */; };
+		61BA1E7098D525072C7D2C91 /* SpatialFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16092CD5AA3F1F7ABC4C220D /* SpatialFrames.swift */; };
+		63F6A75ED5CD1E4F9311A682 /* StereoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B1E51FA7168DD0C04305F /* StereoSession.swift */; };
+		687486BE1C9EDFE1265C77C4 /* PrismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E9F7C2718A54F60A2D98FA /* PrismApp.swift */; };
+		79B46FEA8F4B1749E5A873DA /* PrismVirtualDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 85639E2F74B944B407373C2C /* PrismVirtualDisplay.m */; };
+		83620A63AA6070D4B08782BD /* CaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF86DE81F0EA0CFE40D7C34 /* CaptureSession.swift */; };
+		8414EBF3F42695C3CE79B64B /* Prism.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6B3D9B04B3C0A52100F9FD4C /* Prism.icns */; };
+		8563B8BE123A2594CA37B48D /* RayneoTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDD26A0EF07ECD91069F64 /* RayneoTracker.swift */; };
+		939165E893592401DA69BB81 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E12A8E4C1C551F85AEB383 /* Workspace.swift */; };
+		944D3050D2ACCDF76B5CC096 /* InternalBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51586DBD185D902FDD61CEB2 /* InternalBrightness.swift */; };
+		987EF3557383A1C10DBF66E4 /* SpatialCursorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046C9901F00613BD3ABFE /* SpatialCursorRouter.swift */; };
+		A7B0796FAF3FDA14D60EB178 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDA9FB73095A040216DC014 /* DeviceView.swift */; };
+		AE3B9129DD97491E4A2F5029 /* DeskPad-MIT.txt in Resources */ = {isa = PBXBuildFile; fileRef = A06B1656A8FAA7C5EA0261B4 /* DeskPad-MIT.txt */; };
+		AEF35D675B2D26EAE40C2A97 /* SpatialDesktop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B560CEA2DBF9FE3507AD7 /* SpatialDesktop.swift */; };
+		B12305C1E0D1B9B8173C3DB3 /* Apache-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6FE77080CD276DD86CB3B03 /* Apache-2.0.txt */; };
+		B92688EE1B83F0AE0BB7324D /* LayoutParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9358F50E7F36C7DBDA6FA23 /* LayoutParameters.swift */; };
+		CDA05F891CE3E0F30E1F36F3 /* SpatialMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A700E8F30EA53DF70026CD2 /* SpatialMetalView.swift */; };
+		D2EF20ABF24661F5C78A6692 /* StereoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690098FC5064BDD0C2B968A /* StereoView.swift */; };
+		FDAB9774B34F921ACB90AB81 /* ScreenPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43BA684EA032AFE5FE4C1F /* ScreenPanel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04EADC66759D68BCCBAD059B /* PrismVirtualDisplay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PrismVirtualDisplay.h; sourceTree = "<group>"; };
+		0F5A44F36C462645FA01BDCB /* WorkspaceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; };
+		16092CD5AA3F1F7ABC4C220D /* SpatialFrames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpatialFrames.swift; sourceTree = "<group>"; };
+		1ADDD26A0EF07ECD91069F64 /* RayneoTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RayneoTracker.swift; sourceTree = "<group>"; };
+		32AB07ABC59632752A8ABE0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3A38375B3CFB7CED7F810AE2 /* LayoutEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutEditor.swift; sourceTree = "<group>"; };
+		471046C9901F00613BD3ABFE /* SpatialCursorRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpatialCursorRouter.swift; sourceTree = "<group>"; };
+		4CE1C2349E453E444645C29F /* CustomLayouts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomLayouts.swift; sourceTree = "<group>"; };
+		4F9B560CEA2DBF9FE3507AD7 /* SpatialDesktop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpatialDesktop.swift; sourceTree = "<group>"; };
+		51586DBD185D902FDD61CEB2 /* InternalBrightness.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InternalBrightness.swift; sourceTree = "<group>"; };
+		5690098FC5064BDD0C2B968A /* StereoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StereoView.swift; sourceTree = "<group>"; };
+		5D871F7B50D14A9B40F51624 /* StereoEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StereoEngine.swift; sourceTree = "<group>"; };
+		5EFD9217EC901ED6E4379FBD /* Prism XR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prism XR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61713E522C5055F73927EEF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6A700E8F30EA53DF70026CD2 /* SpatialMetalView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpatialMetalView.swift; sourceTree = "<group>"; };
+		6B3D9B04B3C0A52100F9FD4C /* Prism.icns */ = {isa = PBXFileReference; includeInIndex = 1; path = Prism.icns; sourceTree = "<group>"; };
+		6DF86DE81F0EA0CFE40D7C34 /* CaptureSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CaptureSession.swift; sourceTree = "<group>"; };
+		7004C51DD85FB9EBCCF0DAF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E9F7C2718A54F60A2D98FA /* PrismApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrismApp.swift; sourceTree = "<group>"; };
+		79E12A8E4C1C551F85AEB383 /* Workspace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
+		7A43BA684EA032AFE5FE4C1F /* ScreenPanel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScreenPanel.swift; sourceTree = "<group>"; };
+		85639E2F74B944B407373C2C /* PrismVirtualDisplay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PrismVirtualDisplay.m; sourceTree = "<group>"; };
+		8EECCF05A7167238AD85B3ED /* DepthAnythingV2SmallF16P6.mlpackage */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.mlpackage; path = DepthAnythingV2SmallF16P6.mlpackage; sourceTree = "<group>"; };
+		9F01C8F0A8DCEC9828A69868 /* OrientationFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OrientationFusion.swift; sourceTree = "<group>"; };
+		A06B1656A8FAA7C5EA0261B4 /* DeskPad-MIT.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "DeskPad-MIT.txt"; sourceTree = "<group>"; };
+		A769261F0ED05504470F0DCD /* GlassesOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GlassesOutput.swift; sourceTree = "<group>"; };
+		B89B1E51FA7168DD0C04305F /* StereoSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StereoSession.swift; sourceTree = "<group>"; };
+		C9358F50E7F36C7DBDA6FA23 /* LayoutParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LayoutParameters.swift; sourceTree = "<group>"; };
+		CDF2B7489A11C227488CC04C /* CGVirtualDisplayPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CGVirtualDisplayPrivate.h; sourceTree = "<group>"; };
+		CFDA9FB73095A040216DC014 /* DeviceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		D6FE77080CD276DD86CB3B03 /* Apache-2.0.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "Apache-2.0.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E8893464B792D30881CDC6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301334E95AD9DA262AEDAFBD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21AF286D5CAE1BE1C27661EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8EECCF05A7167238AD85B3ED /* DepthAnythingV2SmallF16P6.mlpackage */,
+				6B3D9B04B3C0A52100F9FD4C /* Prism.icns */,
+				D6FE77080CD276DD86CB3B03 /* Apache-2.0.txt */,
+				A06B1656A8FAA7C5EA0261B4 /* DeskPad-MIT.txt */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63D4E6D6CC30A1A29354B7D0 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				32AB07ABC59632752A8ABE0E /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		68CB4562F97829E3DD877779 = {
+			isa = PBXGroup;
+			children = (
+				C1F95C618F0FBF4BB296C3DA /* Products */,
+				C9B6A202E0BB8AB088E14E26 /* Frameworks */,
+				9CA8B23F8DD4F83CCEBA41F2 /* Sources */,
+				21AF286D5CAE1BE1C27661EF /* Resources */,
+				7004C51DD85FB9EBCCF0DAF5 /* Info.plist */,
+				61713E522C5055F73927EEF9 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		9CA8B23F8DD4F83CCEBA41F2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6DF86DE81F0EA0CFE40D7C34 /* CaptureSession.swift */,
+				CFDA9FB73095A040216DC014 /* DeviceView.swift */,
+				72E9F7C2718A54F60A2D98FA /* PrismApp.swift */,
+				7A43BA684EA032AFE5FE4C1F /* ScreenPanel.swift */,
+				5D871F7B50D14A9B40F51624 /* StereoEngine.swift */,
+				B89B1E51FA7168DD0C04305F /* StereoSession.swift */,
+				5690098FC5064BDD0C2B968A /* StereoView.swift */,
+				79E12A8E4C1C551F85AEB383 /* Workspace.swift */,
+				0F5A44F36C462645FA01BDCB /* WorkspaceView.swift */,
+				4CE1C2349E453E444645C29F /* CustomLayouts.swift */,
+				3A38375B3CFB7CED7F810AE2 /* LayoutEditor.swift */,
+				C9358F50E7F36C7DBDA6FA23 /* LayoutParameters.swift */,
+				1ADDD26A0EF07ECD91069F64 /* RayneoTracker.swift */,
+				4F9B560CEA2DBF9FE3507AD7 /* SpatialDesktop.swift */,
+				A769261F0ED05504470F0DCD /* GlassesOutput.swift */,
+				85639E2F74B944B407373C2C /* PrismVirtualDisplay.m */,
+				04EADC66759D68BCCBAD059B /* PrismVirtualDisplay.h */,
+				CDF2B7489A11C227488CC04C /* CGVirtualDisplayPrivate.h */,
+				51586DBD185D902FDD61CEB2 /* InternalBrightness.swift */,
+				9F01C8F0A8DCEC9828A69868 /* OrientationFusion.swift */,
+				16092CD5AA3F1F7ABC4C220D /* SpatialFrames.swift */,
+				6A700E8F30EA53DF70026CD2 /* SpatialMetalView.swift */,
+				471046C9901F00613BD3ABFE /* SpatialCursorRouter.swift */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C1F95C618F0FBF4BB296C3DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EFD9217EC901ED6E4379FBD /* Prism XR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9B6A202E0BB8AB088E14E26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D4E6D6CC30A1A29354B7D0 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7534F2BDA2679DFCAC3B6D70 /* Prism XR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60941E71374AD56497234A3B /* Build configuration list for PBXNativeTarget "Prism XR" */;
+			buildPhases = (
+				1DD13CF55F132C7B6909F742 /* Sources */,
+				3E8893464B792D30881CDC6E /* Frameworks */,
+				E4090612320BA49C23BD166B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Prism XR";
+			productName = "Prism XR";
+			productReference = 5EFD9217EC901ED6E4379FBD /* Prism XR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50C1A3AE66DF44D485124009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 15B572936537D12E09D25B4F /* Build configuration list for PBXProject "Prism XR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68CB4562F97829E3DD877779;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C1F95C618F0FBF4BB296C3DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7534F2BDA2679DFCAC3B6D70 /* Prism XR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4090612320BA49C23BD166B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8414EBF3F42695C3CE79B64B /* Prism.icns in Resources */,
+				B12305C1E0D1B9B8173C3DB3 /* Apache-2.0.txt in Resources */,
+				AE3B9129DD97491E4A2F5029 /* DeskPad-MIT.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DD13CF55F132C7B6909F742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83620A63AA6070D4B08782BD /* CaptureSession.swift in Sources */,
+				A7B0796FAF3FDA14D60EB178 /* DeviceView.swift in Sources */,
+				687486BE1C9EDFE1265C77C4 /* PrismApp.swift in Sources */,
+				FDAB9774B34F921ACB90AB81 /* ScreenPanel.swift in Sources */,
+				09F6E4A597BE2717F34AF55D /* StereoEngine.swift in Sources */,
+				63F6A75ED5CD1E4F9311A682 /* StereoSession.swift in Sources */,
+				D2EF20ABF24661F5C78A6692 /* StereoView.swift in Sources */,
+				939165E893592401DA69BB81 /* Workspace.swift in Sources */,
+				0B65171E1E344F7390E2B293 /* WorkspaceView.swift in Sources */,
+				472F1362232CEEDAAD6BC6E7 /* DepthAnythingV2SmallF16P6.mlpackage in Sources */,
+				10E511E5724222F330EEDC6E /* CustomLayouts.swift in Sources */,
+				00C699A9975B300F59F7428D /* LayoutEditor.swift in Sources */,
+				B92688EE1B83F0AE0BB7324D /* LayoutParameters.swift in Sources */,
+				8563B8BE123A2594CA37B48D /* RayneoTracker.swift in Sources */,
+				AEF35D675B2D26EAE40C2A97 /* SpatialDesktop.swift in Sources */,
+				2951A8DA244ED40E7A1B8635 /* GlassesOutput.swift in Sources */,
+				79B46FEA8F4B1749E5A873DA /* PrismVirtualDisplay.m in Sources */,
+				944D3050D2ACCDF76B5CC096 /* InternalBrightness.swift in Sources */,
+				40932B7769BC807149647BEF /* OrientationFusion.swift in Sources */,
+				61BA1E7098D525072C7D2C91 /* SpatialFrames.swift in Sources */,
+				CDA05F891CE3E0F30E1F36F3 /* SpatialMetalView.swift in Sources */,
+				987EF3557383A1C10DBF66E4 /* SpatialCursorRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3522DFEE675B64B816950A66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3557E964CFD8521BB35884E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COREML_CODEGEN_LANGUAGE = None;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prismxr.workbench;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/PrismVirtualDisplay.h;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		3C19D7E9FD64B2D7AD69EE5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6EACE13558A0D6B58D7DB6AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COREML_CODEGEN_LANGUAGE = None;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prismxr.workbench;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/PrismVirtualDisplay.h;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15B572936537D12E09D25B4F /* Build configuration list for PBXProject "Prism XR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C19D7E9FD64B2D7AD69EE5F /* Debug */,
+				3522DFEE675B64B816950A66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60941E71374AD56497234A3B /* Build configuration list for PBXNativeTarget "Prism XR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3557E964CFD8521BB35884E8 /* Release */,
+				6EACE13558A0D6B58D7DB6AB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50C1A3AE66DF44D485124009 /* Project object */;
+}

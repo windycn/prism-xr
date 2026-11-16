@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh-Hans</string>
+	<key>CFBundleDisplayName</key>
+	<string>Prism XR</string>
+	<key>CFBundleExecutable</key>
+	<string>Prism XR</string>
+	<key>CFBundleIconFile</key>
+	<string>Prism</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.prismxr.workbench</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Prism XR</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>10</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>27.0</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Prism XR 在你选取屏幕或窗口后，将其显示在工作区或转换为左右眼画面。</string>
+</dict>
+</plist>
