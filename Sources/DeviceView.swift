@@ -58,8 +58,8 @@ struct DeviceView: View {
                 }
 
                 HStack(spacing: 12) {
-                    summaryCard(title: "RayNeo GT Max", value: matchingUSB ? "发现 USB 标识" : "未发现 USB 标识",
-                                detail: "USB 3941:AF50", symbol: "eyeglasses",
+                    summaryCard(title: matchingUSB ? "RayNeo GT Max" : "眼镜 USB", value: matchingUSB ? "发现 USB 标识" : "未发现支持的 USB 接口",
+                                detail: matchingUSB ? "USB 3941:AF50" : "连接眼镜后重新扫描", symbol: "eyeglasses",
                                 tint: matchingUSB ? .green : .orange)
                     summaryCard(title: "桌面来源", value: "\(displays.filter(\.isWorkspaceSource).count) 块",
                                 detail: "Mac 内屏和独立副屏；眼镜输出另列",

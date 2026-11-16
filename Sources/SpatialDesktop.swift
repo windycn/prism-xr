@@ -29,6 +29,10 @@ final class SpatialDesktop: NSObject, SCStreamDelegate {
     private(set) var outputAvailable = false
     private(set) var outputDisplays: [OutputDisplay] = []
     private(set) var selectedOutputID: CGDirectDisplayID?
+    var automaticOutputLabel: String {
+        outputDisplays.filter(\.supportsGTMaxControls).count == 1 ? "已识别 RayNeo GT Max" : "自动选择"
+    }
+
     var supportsOutputTracking: Bool {
         outputDisplays.first(where: { $0.id == glassesDisplayID })?.supportsGTMaxControls == true
     }

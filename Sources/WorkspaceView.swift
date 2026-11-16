@@ -49,7 +49,7 @@ struct WorkspaceView: View {
                         get: { desktop.selectedOutputID },
                         set: { desktop.selectOutput($0) }
                     )) {
-                        Text("自动识别 GT Max").tag(nil as CGDirectDisplayID?)
+                        Text(desktop.automaticOutputLabel).tag(nil as CGDirectDisplayID?)
                         ForEach(desktop.outputDisplays) { display in
                             Text(display.name).tag(Optional(display.id))
                         }

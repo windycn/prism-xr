@@ -14,7 +14,7 @@ A native macOS spatial workspace for RayNeo GT-series AR glasses. Mirror the Mac
 
 ## Compatibility
 
-Apple Silicon, macOS 27 or later, and an active Mac built-in display. RayNeo GT Max was used for the hardware validation of earlier development builds. Version 1.0 was checked offline. For other GT models, future RayNeo glasses or compatible external video displays, select the output under **眼镜视频输出**. Generic output uses a fixed view or overview. Head tracking and hardware mode controls depend on the verified GT Max USB protocol. Video compatibility with other models is unverified.
+Apple Silicon, macOS 27 or later, and an active Mac built-in display. All physical glasses testing for Prism XR was performed specifically with RayNeo GT Max on earlier development builds. Version 1.0 was checked offline. For other GT models, future RayNeo glasses or compatible external video displays, select the output under **眼镜视频输出**. Generic output uses a fixed view or overview. Head tracking and hardware mode controls depend on the verified GT Max USB protocol. Video compatibility with other models is unverified.
 
 ## Getting started
 
